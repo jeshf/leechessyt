@@ -1,0 +1,91 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todas las publicaciones</title>
+<link rel="shortcut icon" href="/media/favicon.jpg"/>
+<link rel="stylesheet"href="{% static '/css/style3.css' %}">
+    <script src="{% static '/js/jquery-3.1.1.min.js' %}"></script>
+		<link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+		<link rel="stylesheet"href="{% static '/css/style2.css' %}">
+		<script src="{% static '/js/bootstrap.min.js' %}"></script>
+
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="{% static '/css/bar.css' %}">
+      	<link rel="icon" href="media/icon.png" type="image/x-icon" />
+</head>
+<body>
+<header>
+</header>
+<div class="container-fluid" style="padding: 0px">
+		<div class="container" style="width: 100%">
+         <nav class="navbar navbar-default navbar-fixed-top">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://www.youtube.com/channel/UCyDDAGnVUytq0xvdtkDJDiQ?sub_confirmation=1">Canal de Youtube</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/api/about/">Acerca del canal</a></li>
+            <li><a href="/api/contact/">Contacto</a></li>
+            <li><a href="/api/login/">Inicia sesión o registrate</a></li>
+              <li><a href="/api/allposts/">Servicios y trabajos</a></li>
+            <li ><a style="background: transparent"><form method="POST">{% csrf_token %}
+            <input type="text" placeholder="Buscar" name="name">
+            <button type="submit"><i class="fa fa-search"></i></button>
+            </form></a></li>
+              {% if username != None %}
+                  <li style="background: transparent"><a href="/api/client/services/"style="background: transparent"><form method="POST" action="/api/logout/"><strong>Tus trabajos: {{ username }}</strong>{% csrf_token %}
+                      <input type="submit" value="Cerrar sesión" class="bg-info"></form></a></li>
+
+              {% endif %}
+          </ul>
+        </div>
+
+    </nav>
+            <h1 class="text-center bg-gray table-bordered text-uppercase"><i>Publicaciones con recursos de ajedrez</i></h1>
+			 <p class="text-center">
+				<i id="passwordHelpInline" class="text-muted"> Suscribete al canal de youtube <a href="https://www.youtube.com/channel/UCyDDAGnVUytq0xvdtkDJDiQ?sub_confirmation=1">link del canal</a></i>
+			</p>
+ 			<hr class="table-bordered">
+                <div class="row">
+                            {% for post in allposts %}
+                                                   <div class="col-md-4">
+                            <div class="panel panel-default text-center">
+  <div class="panel-heading panel-title">
+    <h4>{{post.postTitle}}</h4>
+  </div>
+  <div class="panel-body">
+<div class="slider-wrapper theme-bar">
+                            <p class="card-text">
+                                {{ post.postDescription }}
+                        </p>
+                <div class="link-2">
+                            <a href="/api/rest/posts/{{ post.id }}/image/">
+                                <span class="thick text-uppercase">Ver Detalles</span>
+                            </a>
+                            <br>
+                            </div></div>
+  </div></div></div>
+                            {% endfor %}
+                </div>
+        </div>
+        </div>
+		<p class="text-center">
+			<i id="passwordHelpInline" class="text-muted"> Lee Chess: El canal de ajedrez para todo tipo de ajedrecistas,
+            los invito a ver mis videos no se arrepentirán.<br><img class="sma" src="/media/lichess.jpeg"><a href="https://lichess.org/team/equipo-lee-chess-youtube">Únete a nuestro grupo de lichess</a><img class="sma" src="/media/youtube.jpg"><a href="https://www.youtube.com/channel/UCyDDAGnVUytq0xvdtkDJDiQ">Canal de Youtube</a>
+            <img class="sma" src="/media/facebook.png"><a href="https://www.facebook.com/profile.php?id=100006842134922">Únete a nuestro grupo de facebook</a></i>
+		</p>
+	</div>
+
+</body>
+</html>

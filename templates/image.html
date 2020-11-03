@@ -1,0 +1,170 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Lee Chess Youtube</title>
+      <link rel="shortcut icon" href="/media/favicon.jpg"/>
+      <script src="{% static '/js/jquery-3.1.1.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static '/css/style.css' %}">
+		<link rel="stylesheet"href="{% static '/css/style2.css' %}">
+      <link rel="stylesheet" href="{% static '/css/style3.css' %}">
+		<script src="{% static '/js/bootstrap.min.js' %}"></script>
+
+      <link rel="stylesheet" href="{% static '/css/bar.css' %}">
+      	<link rel="icon" href="media/icon.png" type="image/x-icon" />
+      <script type="text/javascript">
+          function Hide_Show(id){
+		    var caja = document.getElementById(id);
+		    //window.alert(id);
+		    if (caja.style.display == "none")
+            {
+                caja.style.display = "block";
+                //this.value="Ocultar Respuestas";
+            }
+		    else
+            {
+                caja.style.display = "none";
+                //this.value="Ver Respuestas";
+            }
+        }
+        function Show(id){
+		    var caja = document.getElementById(id);
+		    //window.alert(id);
+		    if (caja.style.display == "none")
+            {
+                caja.style.display = "block";
+                //this.value="Ocultar Respuestas";
+            }
+        }
+        function Show(id){
+		    var caja = document.getElementById(id);
+		    //window.alert(id);
+		    if (caja.style.display == "none")
+            {
+                caja.style.display = "block";
+                //this.value="Ocultar Respuestas";
+            }
+        }
+      </script>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  </head>
+  <body>
+<div class="container-fluid" style="padding: 0px">
+		<div class="container" style="width: 100%">
+         <nav class="navbar navbar-default navbar-fixed-top">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://www.youtube.com/channel/UCyDDAGnVUytq0xvdtkDJDiQ">Canal de Youtube</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/api/home/">Página de inicio</a></li>
+            <li><a href="/api/about/">Acerca del canal</a></li>
+            <li><a href="/api/contact/">Contacto</a></li>
+            <li><a href="/api/login/">Inicia sesión o registrate</a></li>
+              <li><a href="/api/allposts/">Publicaciones</a></li>
+              {% if username != None %}
+                 <li style="background: transparent"><a style="background: transparent"><form method="POST" action="/api/logout/"><strong>Bienvenido: {{ username }}</strong>{% csrf_token %}
+                      <input type="submit" value="Cerrar sesión" class="bg-info"></form></a></li>
+              {% endif %}
+          </ul>
+        </div>
+    </nav>
+            <h1 class="bg-gray table-bordered text-uppercase text-center"><i>{{ post.postTitle }}</i></h1>
+			 <div class="bg-gray text-center table-bordered "><b>Descripción:</b> <label>{{ post.postDescription }}</label>
+                        </div>
+                        <br>
+ 			<hr class="table-bordered">
+                <div class="row">
+                <div class="col-xs-1 col-sm-1"></div>
+                <div class="text-center col-xs-10 col-sm-10 ">
+                    <form method="post" action="https://www.youtube.com/channel/UCyDDAGnVUytq0xvdtkDJDiQ?sub_confirmation=1">
+                        <div class="text-center vertical bg-info text-uppercase"><strong>Si gustas apoyarme, por favor considera suscribirte a mi canal de youtube, para que siga subiendo más contenido gratuito </strong><input type="submit" class="btn btn-default vertical" value ="clic aquí"></div>
+                    </form><br>
+                    <input type="submit" class="btn btn-default" onclick="Show('ocultar')" value="Ya estoy suscrito ver contenido">
+                    <br><br>
+                    {% if 'youtube' in post.link %}
+                        <div id="ocultar" style="display:none">
+                    <iframe width="560" height="315" src="{{post.link}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                    {% else %}
+                   <div id="ocultar" style="display:none">
+                     <div class="link-2">
+                            <a href="{{ post.link }}">
+                                <span class="thick text-uppercase">Descargar contenido</span>
+                            </a>
+                            <br>
+                            </div>
+                                    </div>
+                    {% endif %}
+                   </div>
+                <div class="col-xs-1 col-sm-1"></div>
+                </div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-1"></div>
+            <div class="col-xs-10 col-sm-10 head bg-gray table-bordered text-center">
+                                <form method="post">
+                                    {% csrf_token %}
+                                    {{ form }}
+                                    <input type="hidden" name="flag" value="{{ "comentar" }}">
+                                    <button type="submit" class="btn btn-primary vertical">Enviar</button>
+                                </form>
+                </div>
+        <div class="col-xs-1 col-sm-1"></div>
+    </div>
+        {% if comment != 0 %}
+                <div class="row">
+                <br>
+            <div class="col-xs-1 col-sm-1"></div>
+
+            <div class="col-xs-10 col-sm-10 bg-gray table-bordered text-center">
+
+                        {% for comments in comment %}
+                            <div class="table-bordered">
+                            <br>
+                            <textarea  rows="2" cols="62" disabled="True">{{ print}} {{comments.createdBy}} dijo: {{ comments.text }}</textarea>
+
+                            {% if replies != 0 %}
+                                <input type="submit" class="btn btn-default vertical"  onclick="Hide_Show('{{ comments.id }}')" value="Ver/Ocultar Respuestas">
+                                    <div id="{{comments.id}}" style="display:none">
+                                    <p>Respuestas:</p>
+                                 {% for reply in replies %}
+                                     {% if reply.comment == comments %}
+                                     <textarea  rows="2" cols="40" disabled="True">{{ print}} {{reply.repliedBy}} dijo: {{ reply.text }}</textarea>
+                                     {% endif %}
+                                 {% endfor %}
+                                    </div>
+                                {% endif %}
+                            <form method="post">
+                                    {% csrf_token %}
+                                    {{ formr }}<button type="submit" class="btn btn-default vertical">Responder</button><br/>
+                                    <input type="hidden" name="primarkey" value="{{ comments.id }}">
+                                    <input type="hidden" name="flag" value="{{ "responder" }}">
+                            </form>
+                            <br>
+                            </div>
+                        {% endfor %}
+            </div>
+
+            <div class="col-xs-1 col-sm-1"></div>
+                </div>
+        {% endif %}
+                </div>
+                </div>
+		<p class="text-center">
+			<i id="passwordHelpInline" class="text-muted"> Lee Chess: El canal de ajedrez para todo tipo de ajedrecistas,
+            los invito a ver mis videos no se arrepentirán.<br><img class="sma" src="/media/lichess.jpeg"><a href="https://lichess.org/team/equipo-lee-chess-youtube">Únete a nuestro grupo de lichess</a><img class="sma" src="/media/youtube.jpg"><a href="https://www.youtube.com/channel/UCyDDAGnVUytq0xvdtkDJDiQ">Canal de Youtube</a>
+            <img class="sma" src="/media/facebook.png"><a href="https://www.facebook.com/profile.php?id=100006842134922">Únete a nuestro grupo de facebook</a></i>
+		</p>
+	</div>
+  </body>
+</html>

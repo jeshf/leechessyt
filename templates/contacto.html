@@ -1,0 +1,79 @@
+
+{% load static %}
+<!DOCTYPE html>
+	<title>Lee Chess Youtube</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<head>
+        <link rel="shortcut icon" href="/media/favicon.jpg"/>
+        <script src="{% static '/js/jquery-3.1.1.min.js' %}"></script>
+		<link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+		<link rel="stylesheet"href="{% static '/css/style2.css' %}">
+		<script src="{% static '/js/bootstrap.min.js' %}"></script>
+			<link rel="icon" href="media/icon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+      <link rel="stylesheet" href="{% static '/css/bar.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	</head>
+	<body>
+    <header lang="es">
+    </header>
+	<div class="container-fluid" style="padding: 0px">
+		<div class="container" style="width: 100%">
+         <nav class="navbar navbar-default navbar-fixed-top">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://www.youtube.com/channel/UCyDDAGnVUytq0xvdtkDJDiQ">Canal de Youtube</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/api/home/">Página de inicio</a></li>
+            <li><a href="/api/about/">Acerca del canal</a></li>
+            <li><a href="/api/contact/">Contacto</a></li>
+            <li><a href="/api/login/">Inicia sesión o registrate</a></li>
+              <li><a href="/api/allposts/">Publicaciones</a></li>
+              {% if username != None %}
+                  <li style="background: transparent"><a style="background: transparent"><form method="POST" action="/api/logout/"><strong>Bienvenido: {{ username }}</strong>{% csrf_token %}
+                      <input type="submit" value="Cerrar sesión" class="bg-info"></form></a></li>
+              {% endif %}
+          </ul>
+        </div>
+    </nav>
+			<h1 class="text-center " id="title">Información de contacto del canal de youtube de Lee Chess</h1>
+ 			<hr class="table-bordered">
+			<div class="row">
+				<div class="col-md-12 ">
+                        <div class="text-justify">
+                        <mark  class="text-center bg-info text-large">
+                            Ponte en contacto conmigo dejando tus comentarios en las <a href="/api/allposts/">publicaciones</a>, o uniendote al <a href="https://www.facebook.com/groups/584812451690367">grupo oficial del canal en facebook</a>.
+                            Puedes retarme en cualquier plataforma acepto casi todos los retos <a href="https://lichess.org/@/jessehf">lichess</a>, <a href="https://chess24.com/es/profile/jessehf">chess24</a> y <a href="https://www.chess.com/member/jessehf">chess.com</a>.
+                            <img class="sma" src="/media/lichess.jpeg"><a href="https://lichess.org/team/equipo-lee-chess-youtube">Únete a nuestro grupo de lichess</a><img class="sma" src="/media/youtube.jpg"><a href="https://www.youtube.com/channel/UCyDDAGnVUytq0xvdtkDJDiQ">Canal de Youtube</a>
+            <img class="sma" src="/media/facebook.png"><a href="https://www.facebook.com/profile.php?id=100006842134922">Únete a nuestro grupo de facebook</a>
+                        </mark>
+                        </div>
+                    </div>
+				</div>
+            <div class="row">
+                <br>
+                <div class="col-md-12">
+                <iframe src="https://www.youtube.com/embed/453-n26PFDM" allowfullscreen></iframe>
+                </div>
+            </div>
+			</div>
+		</div>
+		<p class="text-center">
+			<i id="passwordHelpInline" class="text-muted"> Lee Chess: El canal de ajedrez para todo tipo de ajedrecistas,
+            los invito a ver mis videos no se arrepentirán.<br><img class="sma" src="/media/lichess.jpeg"><a href="https://lichess.org/team/equipo-lee-chess-youtube">Únete a nuestro grupo de lichess</a><img class="sma" src="/media/youtube.jpg"><a href="https://www.youtube.com/channel/UCyDDAGnVUytq0xvdtkDJDiQ">Canal de Youtube</a>
+            <img class="sma" src="/media/facebook.png"><a href="https://www.facebook.com/profile.php?id=100006842134922">Únete a nuestro grupo de facebook</a></i>
+		</p>
+	</div>
+	</body>
+</html>
+
+
