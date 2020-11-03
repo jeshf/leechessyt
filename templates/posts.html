@@ -35,18 +35,18 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
+                       <li><a href="/api/home/">Página de inicio</a></li>
             <li><a href="/api/about/">Acerca del canal</a></li>
             <li><a href="/api/contact/">Contacto</a></li>
             <li><a href="/api/login/">Inicia sesión o registrate</a></li>
-              <li><a href="/api/allposts/">Servicios y trabajos</a></li>
+              <li><a href="/api/allposts/">Publicaciones</a></li>
             <li ><a style="background: transparent"><form method="POST">{% csrf_token %}
             <input type="text" placeholder="Buscar" name="name">
             <button type="submit"><i class="fa fa-search"></i></button>
             </form></a></li>
               {% if username != None %}
-                  <li style="background: transparent"><a href="/api/client/services/"style="background: transparent"><form method="POST" action="/api/logout/"><strong>Tus trabajos: {{ username }}</strong>{% csrf_token %}
+                  <li style="background: transparent"><a style="background: transparent"><form method="POST" action="/api/logout/"><strong>Bienvenido: {{ username }}</strong>{% csrf_token %}
                       <input type="submit" value="Cerrar sesión" class="bg-info"></form></a></li>
-
               {% endif %}
           </ul>
         </div>
