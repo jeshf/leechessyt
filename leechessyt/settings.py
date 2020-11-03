@@ -69,9 +69,7 @@ ROOT_URLCONF = 'leechessyt.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-           #otra ruta o la cantidad que desee'/',
-       ],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
