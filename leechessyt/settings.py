@@ -93,7 +93,7 @@ LOGIN_URL='/api/login/'
 LOGIN_REDIRECT_URL = '/api/rest/posts/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "sistema/static"),)
 STATIC_URL = '/static/'
 DATE_INPUT_FORMATS = ['%d-%m-%Y']
 
