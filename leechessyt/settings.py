@@ -71,7 +71,6 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
            #otra ruta o la cantidad que desee'/',
-            '/home/jesus/django-projects-environments/leechessyt/templates',
        ],
         'APP_DIRS': True,
         'OPTIONS': {
