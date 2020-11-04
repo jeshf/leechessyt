@@ -66,11 +66,11 @@ class SignUpForm(forms.Form):
         if password != password2:
             raise forms.ValidationError('Las contraseñas no pueden ser diferentes')
 class PostForm(forms.Form):
-    postTitle = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'Escribe el título de la publicación',
+    postTitle = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Escribe el título de la publicación',
                                                                              'class': 'input-lg form-control'}))
     postDescription = forms.CharField(max_length=500,widget=forms.Textarea(attrs={'rows': 2, 'cols': 30, 'placeholder':'Escribe la descripción de la publicación',
                                                                                    'class':'input-lg form-control'}))
-    link = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'link de la publicación',
+    link = forms.CharField(max_length=150, widget=forms.TextInput(attrs={'placeholder': 'link de la publicación',
                                                               'class': 'input-lg form-control'}))
     def clean(self):
         cleaned_data = super(PostForm, self).clean()
@@ -87,7 +87,7 @@ class DateInput(forms.DateInput):
     input_type = 'date'
 
 class SearchForm(forms.Form):
-    name = forms.CharField(max_length=50,widget=forms.TextInput())
+    name = forms.CharField(max_length=100,widget=forms.TextInput())
     def clean(self):
         cleaned_data = super(SearchForm, self).clean()
         name = cleaned_data.get('name')
