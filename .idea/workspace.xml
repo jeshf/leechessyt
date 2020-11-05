@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66342c87-2577-498d-b137-5b7c8b9d4a47" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../leechessyt/.idea/leechessyt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../leechessyt/.idea/leechessyt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../leechessyt/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../leechessyt/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../leechessyt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../leechessyt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../leechessyt/sistema/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../leechessyt/sistema/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../leechessyt/sistema/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../leechessyt/sistema/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../leechessyt/sistema/static/css/style3.css" beforeDir="false" afterPath="$PROJECT_DIR$/../leechessyt/sistema/static/css/style3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leechessytdeploy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leechessytdeploy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contacto.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contacto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style3.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style3.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +28,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../leechessyt" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -84,7 +91,8 @@
       <workItem from="1604423958327" duration="1739000" />
       <workItem from="1604425792105" duration="410000" />
       <workItem from="1604493617423" duration="745000" />
-      <workItem from="1604506834613" duration="412000" />
+      <workItem from="1604506834613" duration="1134000" />
+      <workItem from="1604580854263" duration="736000" />
     </task>
     <servers />
   </component>
