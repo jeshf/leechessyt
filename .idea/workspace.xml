@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66342c87-2577-498d-b137-5b7c8b9d4a47" name="Default Changelist" comment="" />
+    <list default="true" id="66342c87-2577-498d-b137-5b7c8b9d4a47" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../leechessyt/templates/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/../leechessyt/templates/posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leechessytdeploy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leechessytdeploy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,13 +23,14 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sistema/migrations" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../leechessyt" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sistema/migrations" />
       <recent name="$PROJECT_DIR$" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -80,7 +88,9 @@
       <workItem from="1604425792105" duration="410000" />
       <workItem from="1604493617423" duration="745000" />
       <workItem from="1604506834613" duration="1134000" />
-      <workItem from="1604580854263" duration="1247000" />
+      <workItem from="1604580854263" duration="1808000" />
+      <workItem from="1604703492029" duration="62000" />
+      <workItem from="1605188911074" duration="435000" />
     </task>
     <servers />
   </component>
