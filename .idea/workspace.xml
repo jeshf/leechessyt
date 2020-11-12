@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="66342c87-2577-498d-b137-5b7c8b9d4a47" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../leechessyt/templates/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/../leechessyt/templates/posts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/leechessytdeploy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leechessytdeploy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts.html" afterDir="false" />
     </list>
@@ -90,7 +87,7 @@
       <workItem from="1604506834613" duration="1134000" />
       <workItem from="1604580854263" duration="1808000" />
       <workItem from="1604703492029" duration="62000" />
-      <workItem from="1605188911074" duration="435000" />
+      <workItem from="1605188911074" duration="918000" />
     </task>
     <servers />
   </component>
